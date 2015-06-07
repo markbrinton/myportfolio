@@ -1,6 +1,15 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/scrollView"
+    android:layout_alignParentBottom="true"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
@@ -19,7 +28,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:id="@+id/spottify_button"
             android:layout_below="@+id/textView"
@@ -31,7 +40,7 @@
             android:onClick="spotifyApp" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:text="@string/scores_label"
             android:id="@+id/scores_button"
@@ -44,7 +53,7 @@
             android:onClick="scoresApp" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:text="@string/library_label"
             android:id="@+id/library_button"
@@ -56,7 +65,7 @@
             android:onClick="libraryApp" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:text="@string/build_label"
             android:id="@+id/build_button"
@@ -69,7 +78,7 @@
             android:onClick="buildApp" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:text="@string/reader_label"
             android:id="@+id/reader_button"
@@ -81,7 +90,7 @@
             android:onClick="readerApp" />
 
         <Button
-            android:layout_width="200dp"
+            android:layout_width="@dimen/button_width"
             android:layout_height="wrap_content"
             android:text="@string/capstone_label"
             android:id="@+id/capstone_button"
@@ -92,3 +101,5 @@
             android:onClick="capstoneApp" />
 
 </RelativeLayout>
+
+</ScrollView>

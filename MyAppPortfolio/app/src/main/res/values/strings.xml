@@ -11,4 +11,12 @@
     <string name="build_label">Build It Bigger</string>
     <string name="reader_label">XYZ Reader</string>
     <string name="capstone_label">CAPSTONE: My Own App</string>
+
+    <string name="spotify_toast">This button will launch the Spotify Streamer App!</string>
+    <string name="scores_toast">This button will launch the Scores App!</string>
+    <string name="library_toast">This button will launch the Library App!</string>
+    <string name="build_toast">This button will launch the Build It Bigger App!</string>
+    <string name="reader_toast">This button will launch the XYZ Reader App!</string>
+    <string name="capstone_toast">This button will launch the CAPSTONE App!</string>
+
 </resources>

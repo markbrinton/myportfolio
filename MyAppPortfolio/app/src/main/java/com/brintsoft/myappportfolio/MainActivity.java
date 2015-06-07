@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
     private Context m_context = null ;
+    private Toast   m_toast = null ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,31 +43,37 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void showAppToast(String text) {
-        Toast.makeText(m_context, "This button will launch "+text, Toast.LENGTH_SHORT).show();
+    private void showAppToast(int textId) {
+        if( m_toast != null ) {
+            m_toast.cancel();
+        }
+
+        String text = getText(textId).toString() ;
+        m_toast = Toast.makeText(m_context, text, Toast.LENGTH_SHORT) ;
+        m_toast.show();
     }
 
     public void spotifyApp(View view) {
-        showAppToast("The Spotify App!") ;
+        showAppToast(R.string.spotify_toast) ;
     }
 
     public void scoresApp(View view) {
-        showAppToast("The Scores App!") ;
+        showAppToast(R.string.scores_toast) ;
     }
 
     public void libraryApp(View view) {
-        showAppToast("The Library App!") ;
+        showAppToast(R.string.library_toast) ;
     }
 
     public void buildApp(View view) {
-        showAppToast("The Build It Bigger App!") ;
+        showAppToast(R.string.build_toast) ;
     }
 
     public void readerApp(View view) {
-        showAppToast("The XYZReader App!") ;
+        showAppToast(R.string.reader_toast) ;
     }
 
     public void capstoneApp(View view) {
-        showAppToast("My Capstone App!") ;
+        showAppToast(R.string.capstone_toast) ;
     }
 }
